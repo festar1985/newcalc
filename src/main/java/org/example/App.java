@@ -21,10 +21,35 @@ public class App
         Scannerint num2 = new Scannerint();
         double number2 = num2.getNumber();
 
-        double result = number1 + number2; // creating the variable result to reuse it later
+        double result; // creating the variable result to reuse it later
 
-        System.out.println("THe result is: " + result);
+        switch (function) //use the switch in order to decide which function is going to be used.
+        {
+            case "+":
+                result = number1 + number2;
+                System.out.println("The result is: " + number1 + "+" + number2 + "=" + result);
+                break;
 
+            case "-":
+                result = number1 - number2;
+                System.out.println("The result is: " + number1 + "-" + number2 + "=" + result);
+                break;
+
+            case "*":
+                result = number1 * number2;
+                System.out.println("The result is: " + number1 + "*" + number2 + "=" + result);
+                break;
+
+            case "/":
+                result = number1 / number2;
+                System.out.println("The result is: " + number1 + "/" + number2 + "=" + result);
+                break;
+
+            // catching the case where the user type a function that is not one of the four defined.
+            default:
+                System.out.println("Not a valid function sign: " + function + "\nPlease use +, -, *, /");
+                break;
+        }
     }
 
 }
