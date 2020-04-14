@@ -9,6 +9,19 @@ public class Scannerint
 
     public static double getNumber()
     {
-        return scann.nextInt();
+        String tempnumber = scann.nextLine();
+
+        boolean invalidDouble = true;
+        double number = 0;
+        while(invalidDouble){
+            try{
+                number = Double.parseDouble(tempnumber.replace(',','.'));
+                invalidDouble = false;
+            }catch (NumberFormatException ex){
+                System.out.println("Not a valid double");
+            }
+        }
+
+        return number ;
     }
 }
