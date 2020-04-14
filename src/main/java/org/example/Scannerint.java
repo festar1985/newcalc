@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Scannerint
 {
 
-    Scanner scann = new Scanner(System.in);
+    public static Scanner scann = new Scanner(System.in);
 
-    public double getNumber()
+    public static double getNumber()
     {
         return scann.nextInt();
     }
