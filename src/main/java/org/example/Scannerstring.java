@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Scannerstring
 {
-    //Scanner for inputing stringss
+    //Scanner for inputing strings
 
     public static Scanner scann = new Scanner(System.in);
 

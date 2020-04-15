@@ -18,15 +18,15 @@ public class App
             switch (userinput.toUpperCase())
             {
                 case "Y":
-                    UserInput.Input();
+                    UserInput.Input(); // If Y is typed the program goes to UserInput
                     break;
 
                 case "N":
-                    calculator = false;
+                    calculator = false; // If N the program exits
                     System.out.println("Thank you for using my calculator");
                     break;
 
-                default:
+                default: // Catch all other inputs
                     System.out.println("Unknown input, please choose Y or N");
                     break;
             }

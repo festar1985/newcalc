@@ -5,7 +5,9 @@ public class Calculate
     public static double calculator(double number1, String function, double number2)
     {
 
-        double result = 0;
+        double result = 0; //define a variable to use it later
+
+        // calculating the 4 cases
 
         switch (function)
         {
@@ -25,6 +27,12 @@ public class Calculate
                 break;
 
             case "/":
+
+                if (number2 == 0 )
+                {
+                    System.out.println("You can not divide on 0"); // do not allow to divide on 0
+                    break;
+                }
                 result = number1 / number2;
                 System.out.println("The result is: " + number1 + " / " + number2 + " = " + result);
                 break;
@@ -37,6 +45,5 @@ public class Calculate
 
         return result;
     }
-
 
 }
