@@ -9,7 +9,8 @@ public class App
 
         boolean calculator = true;
 
-        while (calculator){
+        while (calculator)  // Creating a loop in order the calculator to run until the user stops it
+        {
             System.out.println("Do you want to calculate?");
             System.out.println("Choose Y or N");
             String userinput = Scannerstring.getString();
@@ -17,7 +18,7 @@ public class App
             switch (userinput.toUpperCase())
             {
                 case "Y":
-                    Calculate.calculator();
+                    UserInput.Input();
                     break;
 
                 case "N":

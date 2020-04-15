@@ -2,16 +2,8 @@ package org.example;
 
 public class Calculate
 {
-    public static double calculator()
+    public static double calculator(double number1, String function, double number2)
     {
-        System.out.println("Choose Number 1:");
-        double number1 = Scannerint.getNumber();
-
-        System.out.println("Choose function +,-,*,/ :");
-        String function = Scannerstring.getString();
-
-        System.out.println("Choose Number 2:");
-        double number2 = Scannerint.getNumber();
 
         double result = 0;
 
@@ -19,22 +11,22 @@ public class Calculate
         {
             case "+":
                 result = number1 + number2;
-                System.out.println("The result is: " + number1 + "+" + number2 + "=" + result);
+                System.out.println("The result is: " + number1 + " + " + number2 + " = " + result);
                 break;
 
             case "-":
                 result = number1 - number2;
-                System.out.println("The result is: " + number1 + "-" + number2 + "=" + result);
+                System.out.println("The result is: " + number1 + " - " + number2 + " = " + result);
                 break;
 
             case "*":
                 result = number1 * number2;
-                System.out.println("The result is: " + number1 + "*" + number2 + "=" + result);
+                System.out.println("The result is: " + number1 + " * " + number2 + " = " + result);
                 break;
 
             case "/":
                 result = number1 / number2;
-                System.out.println("The result is: " + number1 + "/" + number2 + "=" + result);
+                System.out.println("The result is: " + number1 + " / " + number2 + " = " + result);
                 break;
 
             // catching the case where the user type a function that is not one of the four defined.
@@ -42,6 +34,7 @@ public class Calculate
                 System.out.println("Not a valid function sign: " + function + "\nPlease use +, -, *, /");
                 break;
         }
+
         return result;
     }
 
